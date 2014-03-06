@@ -4,6 +4,7 @@
 
 \usepackage[margin=2cm]{geometry}
 \usepackage{keystroke,dsfont,verbatim}
+\usepackage[super]{nth}
 \usepackage[colorlinks=true, linkcolor=blue]{hyperref}
 
 \newcommand{\menu}[1]{\textbf{#1}}
@@ -299,29 +300,50 @@ If you change due dates or attempts for that student, you must \emph{also check 
 
 \section{`Gamification' of \WW\ with Math Achievements}\label{gamification}
 
-Some research and a lot of anecdotal evidence is showing that we can improve our students' homework completion rates by adding game elements to the assignment. Users of ALEKS will be familiar with its pie, which is an example of this.
+Some research and a lot of anecdotal evidence suggests that we can improve our students' homework completion rates by adding gaming elements to the assignment. Users of ALEKS will be familiar with its pie, which is an example of this.
 
 \subsection{Math Achievements}
 
-Geoff Goehle from Western Carolina university developed a \WW\ module called Math Achievements to bring gamification to \WW. If you enable it, then students earn math achievement points alongside the normal points they earn on assignments. Instructors can do what they will with these points - give some kind of extra credit or not. But as points accrue and tasks are met, students can be awarded a `Level 4 algebra master' badge, etc. If a student opts in, they can enable Facebook integration so that badge-earning and leveling-up is broadcast on their Facebook Timeline. 
+Geoff Goehle from Western Carolina university developed a \WW\ module called Math Achievements to bring gamification to \WW. If you enable it, then students earn math achievement points alongside the normal points they earn on assignments in two ways. Firstly, they can earn achievement points for every correct problem they answer in their assignments. Secondly, when certain achievements are met (like The Early Bird, where a student has 100\% on an assignment within 24 hours of it opening) they get more points and a badge. Instructors can do what they will with these points---give some kind of extra credit or not. But as points accrue and tasks are met, students can ``level up'', eventually reaching ``Level 10 Professor''. 
 
-Students earn points in two ways. Firstly, they can earn points for every correct problem they answer in their assignments. Secondly, when certain achievements are met (like The Early Bird, where a student has 100\% on an assignment within 24 hours of it opening) they get more points and a badge. The list of default achievements has some that are much more interesting than the Early Bird.  
+If you enable Achievements, there are two options: \emph{without} items and \emph{with} items. Achievement items are earned when a student levels up. They are one-time use  items that the students can use to get an edge on their grade, while having a little fun. The items earned at each level (in default conditions) are
+\begin{enumerate}
+\item Lesser Rod of Revelation---Gives a student an automatic 50\% on a single homework problem.
+\item Greater Rod of Revelation---Gives a student an automatic 100\% on a single homework problem.
+\item Box of Transmogrification---Allows a student to change the source file of a single problem to that of a different problem on the same homework set.
+\item Potion of Forgetfulness---Resets the incorrect attempts counter to zero for a single problem.
+\item Cupcake of Enlargement---Doubles the weight of a single problem on a single homework set.
+\item Ring of Reduction---This uses the reduced credit system to allow a student to extend the due date of a currently open homework set by a certain amount of time (usually 24 hours), but for reduced credit.
+\item Tunic of Extension---This allows a student to extend the due date of a currently open homework for 24 hours for full credit.
+\item Cake of Enlargement---This doubles the weight of all of the problems on a currently open homework assignment. A student could end up having a 200\% for their grade on one assignment if they use this.
+\item Scroll of Resurrection---This reopens any homework set (even a closed one) for an additional 24 hours. The problem seeds are re-randomized, so the student won't be able to simply write down the answers while the set is closed, then resurrect it and enter them.
+\item Mystery Package (with Ribbons)---This simply displays a message to students and can be used to do anything from giving away physical rewards in person to simply saying congratulations.
+\end{enumerate}
 
-If you would like to use Math Achievements, the first thing to do is go into the \menu{Course Configuration}, enable Math Achievements, and set the number of points students earn for each problem\footnote{The default setup uses 5 points per problem and is based on about 200 problems per term. You can set the points per problem proportionately.}. This will add the \menu{Achievements} tool to your tool panel, and the \menu{Achievements Editor} to your instructor tools panel. In the \menu{Achievements Editor} you can import a large list of default achievements (\verb=default_achievements.axp=) and enable whichever ones you like. Achievements need to be `assigned' to your students. If you get creative, you can also write your own achievements.
+\subsection{Using Achievements without items}
+
+
+If you would like to use Math Achievements without items, the first thing to do is go into the \menu{Course Configuration}, enable Math Achievements, and set the number of points that students earn for each problem\footnote{The default setup uses 5 points per problem and is based on about 200 problems per term. You can set the points per problem proportionately.}. This will add the \menu{Achievements} tool to all users' tool panels, and the \menu{Achievements Editor} to your instructor tools panel. In the \menu{Achievements Editor}, import the default achievements (\verb=default_achievements.axp=) and enable whichever ones you like. Achievements need to be `assigned' to your students. If you get creative, you can also write your own achievements by using the \menu{Edit Evaluator} link for an existing achievement.
+
+
+\subsection{Using Achievements with items}
+
+
+If you would like to use Math Achievements with items, the first thing to do is go into the \menu{Course Configuration}, enable Math Achievements \emph{and} Achievement Items, and set the number of points that students earn for each problem\footnote{The default setup uses 5 points per problem and is based on about 200 problems per term. You can set the points per problem proportionately.}. This will add the \menu{Achievements} tool to all users' tool panels, and the \menu{Achievements Editor} to your instructor tools panel. In the \menu{Achievements Editor}, import the default achievements (\verb=default_achievements_items.axp=) and enable whichever ones you like. Achievements need to be `assigned' to your students. If you get creative, you can also write your own achievements by using the \menu{Edit Evaluator} link for an existing achievement.
 
 \subsection{Challenge Problem Achievements}
 
-The achievements that you import from \verb=default_achievements.axp= are mostly ready to use as-is. The exception is the achievements that are classified as \verb=04_challenge= achievements. Here the idea is to have award badges for completing especially challenging problems. There are two ways to make use of these:
+The default achievements that you can import are mostly ready to use immediately. The exception is the achievements that are classified as \verb=04_challenge= achievements. Here the idea is to have award badges for completing especially challenging problems. There are two ways to implement these:
 \begin{itemize}
-\item Create a special problem set that has all of the challenge problems that you intend to assign for the term. You need to make the name of this set be \texttt{Challenge}. You can have up to ten problems in it (or more if you create more badges).
-\item Locate the problems in your various problem sets that you would classify as challenge problems, and write down the names of the sets they are in, as well as what problem number they are within that set. Then use your \menu{Achievements Editor} to \menu{Edit Evaluator} for the challenge problem achievements. Where you see code like
+\item Create a special problem set that has all of the challenge problems that you intend to assign for the term. If you make the name of this set be \texttt{Challenge}, then these challenge achievements will work immediately. You can have up to ten problems in it. For more, you would need to create more achievements by using the \menu{Edit Evaluator} link on the \nth{10} challenge achievement and writing an \nth{11}, etc.
+\item Locate the problems in your various problem sets that you would classify as challenge problems, and take note of the names of the sets they are inand what problem number they are within that set. Then use your \menu{Achievements Editor} to \menu{Edit Evaluator} for the challenge problem achievements. Where you see code like
 \begin{verbatim}
 my %validproblems = (
 	'Challenge' => {
 	    '1' => 1, }
 	);
 	\end{verbatim}
-change the code to use the name of the homework set with the challenge problem and the problem number from that set. For example, if the the challenge problem is number 13 from the set Section2\textunderscore{}4, you might end up with
+change the code to use the name of the homework set with the challenge problem and the problem number from that set. For example, if the the challenge problem is number 13 from the set \verb=Section2_4=, you might end up with
 \begin{verbatim}
 my %validproblems = (
 	'Section2_4' => {
@@ -330,14 +352,12 @@ my %validproblems = (
 	\end{verbatim}
 \end{itemize}
 
-Of course a third option is to just disable these challenge badges. And there is no harm in just leaving them as they are if you do not feel any problems that you have assigned are worthy of being called challenge problems. However, if you have the time and have such problems, it adds a little more fun for your students. 
+Of course a third option is to just disable these challenge badges. And there is no harm in just leaving them as they are if you do not feel any problems that you have assigned are worthy of being called challenge problems. However, if you have the time and have some challenging problems, it adds a little more fun for your students. 
 
 If you have made edits like this to the challenge achievements, you would want to consider the implications for exporting these changes to a new course in a subsequent term. Specifically, you would use the \menu{Achievements Editor} to \menu{Export} all of your chosen achievements to a \texttt{.axp} file. Then you would want to include the \texttt{achievements\textbackslash} folder during the \hyperref[exp]{export process}.
 
 
-\subsection{Achievement Items}
 
-Geoff Goehle's latest gamification contribution is achievement items, which can also be enabled in the \menu{Course Configuration} and managed using the \menu{Achievements Editor}. If this is enabled, as students earn achievement points and achievement levels, they earn one-time rewards such as the Greater Rod of Revelation, which gives a student an automatic 100\% on a single homework problem. For more information, see \url{http://webworkgoehle.blogspot.com/2013/05/achievement-items.html}. The items are awarded through level achievements that have items written into them. You can import and assign these from  \verb=default_achievements_items.axp=. This list of achievements is identical to \verb=default_achievements.axp= except that the level achievements award an items as well as level.
 
 \section{Good Ideas to Keep Everything Running Smoothly}\label{goodideas}
 
