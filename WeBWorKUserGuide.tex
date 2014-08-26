@@ -51,9 +51,9 @@ If you are brand new to \WW\, then I suggest progressing in a straight line thro
 
 \section{Logging On and Passwords}
 
-Unless you have a special case,\footnote{Some special courses may have a different structure to their address.} your course is located at \begin{center}\href{http://webwork.pcc.edu/webwork2/}{\texttt{http://webwork.pcc.edu/webwork2/AAAbbb-ccccc}} \end{center} where \texttt{AAA} is your subject code (MTH, CAS, etc.), \texttt{bbb} is your course number (060, 111, etc.),  and \texttt{xxxxx} is your CRN. Make a bookmark with this link at your work station---you will need to come here often. For your students, you should make a link in MyPCC under the \menu{Links} section. (Don't make them have to directly type the awkward web address.) It's also possible that your course is listed at \href{http://webwork.pcc.edu/webwork2/}{http://webwork.pcc.edu/webwork2/}, but it may be hidden.
+Unless you have a special case,\footnote{Some special courses may have a different structure to their address.} your course is located at \begin{center}\href{http://webwork.pcc.edu/webwork2/}{\texttt{http://webwork.pcc.edu/webwork2/aaabbb-ccccc-lastname}} \end{center} where \texttt{aaa} is your subject code (mth, cas, etc.), \texttt{bbb} is your course number (060, 111, etc.),  \texttt{xxxxx} is your CRN, and \texttt{last name} is your last name. You can ask to remove your last name from the address, but having it there can make it easy to find your own courses from among the list at \url{webwork.pcc.edu}. Make a bookmark with this link at your work station---you will need to come here often. For your students, you should make a link in MyPCC under the \menu{Links} section. (Don't make them have to directly type the awkward web address.) It's also possible that your course is listed at \href{http://webwork.pcc.edu/webwork2/}{http://webwork.pcc.edu/webwork2/}, but it may be hidden.
 
-In most cases, everyone's login should be their complete PCC email prefix, using \emph{all lowercase} letters.  If your email is \texttt{jane.doe15@pcc.edu}, your login should be \texttt{jane.doe15}.  The default password should be your G-number, using \emph{a capital G}.  It might be your old password if you have used \WW\ before.  If you cannot log on, contact \href{mailto:alex.jordan@pcc.edu}{Alex Jordan} (SY), Chris Hughes (CA), or Carl Yao (SE), each of whom has administrative access to your account.  Everyone (especially instructors and TAs) should change their password the first time that they log in.  This is done using the \menu{Password/Email} item under \WW's main menu.
+In most cases, everyone's login should be their complete PCC email prefix, using \emph{all lowercase} letters.  If your email is \texttt{jane.doe15@pcc.edu}, your login should be \texttt{jane.doe15}.  The default password should be your G-number, using \emph{a capital G}.  It might be your old password if you have used \WW\ before.  If you cannot log on, contact \href{mailto:alex.jordan@pcc.edu}{Alex Jordan} (SY) or Carl Yao (SE), each of whom has administrative access to your account.  Everyone (especially instructors and TAs) should change their password the first time that they log in.  This is done using the \menu{Password/Email} item under \WW's main menu.
 
 
 \section{Initial Setup}
@@ -65,17 +65,17 @@ Next, there are some options you might want to tend to in the \menu{Course Confi
 
 \subsection{Enabling MathView or DragMath}
 
-These are palette tools that may make it easier for students to enter complicated expressions. If either is enabled, there will be an icon next to each answer blank. Clicking this icon will open an app window that allows students to construct an expression with radicals, fractions, and more using a palette similar to MathType (but with few complications).
+These are palette tools that may make it easier for students to enter complicated expressions. If either is enabled, there will be an icon next to each answer blank. Clicking this icon will open an app window that allows students to construct an expression with radicals, fractions, and more using a palette similar to MathType (but with few complications). MathView is enabled by default. 
 
 \subsection{Reduced Credit Period}
 
 Your assignments will have due dates and due times. If you like, you may allow students to work beyond the due time for reduced credit. If you plan to use this for any homework sets, set both the duration of the reduced credit period and the fraction at which you will offer reduced credit in the \menu{Course Configuration} menu. Later when you create an assignment, you will need to enable the reduced credit period for that particular assignment within the \HSE. You can \hyperref[reducedcredit]{read about this} in the \hyperref[makeset]{section on creating homework sets}. 
 
-\emph{Warning:} If you use this feature, there is currently an unfortunate arrangement. The displayed due date will be the date and time beyond which students cannot submit \emph{any} more answers. The reduced credit period begins prior to this.  \WW\ \emph{does} explain this to students alongside the due date, but this arrangement is potentially confusing.
+\emph{Warning:} If you use this feature, there is currently an unfortunate arrangement. The displayed due date will be the date and time beyond which students cannot submit \emph{any} more answers. The reduced credit period begins \emph{prior} to this.  \WW\ \emph{does} explain this to students alongside the due date, but this arrangement is potentially confusing.
 
 \subsection{Course Achievements}
 
-\WW\ has a feature called Course Achievements. This is a way to award achievement points (separate from regular homework points), badges, levels, and special items to students to make the whole experience more like a game. For many students, this `gamification' of homework is motivational. If you like, enable Course Achievements in the \menu{Course Configuration} menu. Once you do this, your navigation panel will have an \menu{Achievements Editor} in the instructor tools. Also, all users will have an \menu{Achievements} menu to monitor their achievements. This is discussed in more detail in the \hyperref[gamification]{Gamification} section. 
+\WW\ has a feature called Course Achievements. This is a way to award achievement points (separate from regular homework points), badges, levels, and special items to students to make the whole experience more like a game. For many students, this `gamification' of homework is motivational. If you like, enable Course Achievements in the \menu{Course Configuration} menu. Once you do this, your navigation panel will have an \menu{Achievements Editor} in the instructor tools. Also, all users will have an \menu{Achievements} menu to monitor their achievements. To make use of this feature, you need to import achievements and assign them to your students. This is discussed in more detail in the \hyperref[gamification]{Gamification} section. 
 
 \section{Adding/Dropping Students}
 In the future, enrollment of students may be automated through Banner. For now, it falls upon you to enroll students and enter their information. 
@@ -104,7 +104,7 @@ as opposed to say \texttt{professor}.)
 \item Save the Excel document as a \texttt{.csv} file. Excel may give you warnings as you do this about losing data, but don't worry.
 \end{enumerate}
 
-Your \texttt{.csv} file need to be renamed to have a \texttt{.lst} (that's $\ell$\texttt{st}, not
+Your \texttt{.csv} file needs to be renamed to have a \texttt{.lst} (that's $\ell$\texttt{st}, not
 $1$\texttt{st}) extension. If you have trouble doing that in your operating system, you can also rename the file within \WW. Use \WW's \menu{File Manager} to upload your \texttt{.lst} file straight to the \texttt{templates} directory. Check that it really does have the \texttt{.lst} extension (and if not, use the \menu{Rename} tool). Then in the \menu{Classlist Editor}, use \menu{Import users from file} to add all of these students to your \WW\ course. If any problem sets have already been created or imported, then you should now assign them to all of these new students by using the \menu{Instructor Tools}.
 
 
