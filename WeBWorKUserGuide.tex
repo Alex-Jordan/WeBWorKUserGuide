@@ -54,7 +54,12 @@ If you are brand new to \WW\, then I suggest progressing in a straight line thro
 
 \section{Logging On and Passwords}
 
-Unless you have a special case,\footnote{Some special courses may have a different structure to their address.} your course is located at \begin{center}\href{http://webwork.pcc.edu/webwork2/}{\texttt{http://webwork.pcc.edu/webwork2/aaabbb-ccccc-lastname}} \end{center} where \texttt{aaa} is your subject code (mth, cs, etc.), \texttt{bbb} is your course number (060, 111, etc.),  \texttt{xxxxx} is your CRN, and \texttt{lastname} is your last name. You can ask to remove your last name from the address, but having it there can make it easy to find your own courses from among the list at \url{webwork.pcc.edu}. Make a bookmark with this link at your work station---you will need to come here often. For your students, you should make a link in MyPCC under the \menu{Links} section. (Don't make them have to directly type the awkward web address.) It's also possible that your course is listed at \href{http://webwork.pcc.edu/webwork2/}{http://webwork.pcc.edu/webwork2/}, but it may be hidden.
+Unless you have a special case,\footnote{Some special courses may have a different structure to their address.} your course is located at (using all lowercase letters):
+\begin{center}
+\href{http://webwork.pcc.edu/webwork2/}{\texttt{http://webwork.pcc.edu/webwork2/aaabbb-ccccc-lastname}}\\
+or at\\
+ \href{http://webwork.pcc.edu/webwork2/}{\texttt{http://webwork.pcc.edu/webwork2/aaabbb-astname-term}} 
+\end{center} where \texttt{aaa} is your subject code (mth, cs, etc.), \texttt{bbb} is your course number (060, 111, etc.),  \texttt{xxxxx} is your CRN, \texttt{lastname} is your last name, and \texttt{term} is something like \texttt{f15}. You can ask to remove your last name from the CRN-specific address, but having it there can make it easy to find your own courses from among the list at \url{webwork.pcc.edu}. Make a bookmark with this link at your work station---you will need to come here often. For your students, you should make a link in MyPCC under the \menu{Links} section. (Don't make them have to directly type the awkward web address.) It's also possible that your course is listed at \href{http://webwork.pcc.edu/webwork2/}{http://webwork.pcc.edu/webwork2/}, but it may be hidden.
 
 In most cases, everyone's login should be their complete PCC email prefix, using \emph{all lowercase} letters.  If your email is \texttt{jane.doe15@pcc.edu}, your login should be \texttt{jane.doe15}.  The default password should be your G-number, using \emph{a capital G}.  It might be your old password if you have used \WW\ before.  If you cannot log on, contact \href{mailto:alex.jordan@pcc.edu}{Alex Jordan} (SY) or Carl Yao (SE), each of whom has administrative access to your account.  Everyone (especially instructors and TAs) should change their password the first time that they log in.  This is done using the \menu{Password/Email} item under \WW's main menu.
 
@@ -74,9 +79,9 @@ If you would like to make it possible to conditionally release homework assignme
 
 \WW\ has a feature called Course Achievements. This is a way to award achievement points (separate from regular homework points), badges, levels, and special items to students to make the whole experience more like a game. For many students, this `gamification' of homework is motivational. If you like, enable Course Achievements in the \menu{Course Configuration} menu. Once you do this, your navigation panel will have an \menu{Achievements Editor} in the instructor tools. Also, all users will have an \menu{Achievements} menu to monitor their achievements. To make use of this feature, you need to import achievements and assign them to your students. This is discussed in more detail in the \hyperref[gamification]{Gamification} section. 
 
-\subsection{Enabling MathView or DragMath}
+\subsection{Enabling MathView}
 
-These are palette tools that may make it easier for students to enter complicated expressions. If either is enabled, there will be an icon next to each answer blank. Clicking this icon will open an applet window that allows students to construct an expression with radicals, fractions, and more using a palette similar to MathType (but with few complications). MathView is enabled by default. If a student has a MathView window open, then they can see the ``pretty-print'' version of their answer as they type it. For example, as they type \texttt{(x+1)/x}, they will see this sequence appear character by character: $$(\qquad(x\qquad(x+\qquad(x+1\qquad(x+1)\qquad\frac{x+1}{}\qquad\frac{x+1}{x}$$
+This is a palette tools that may make it easier for students to enter complicated expressions. If it is enabled, there will be an icon next to each answer blank. Clicking this icon will open an applet window that allows students to construct an expression with radicals, fractions, and more using a palette similar to MathType (but with few complications). MathView is enabled by default. If a student has a MathView window open, then they can see the ``pretty-print'' version of their answer as they type it. For example, as they type \texttt{(x+1)/x}, they will see this sequence appear character by character: $$(\qquad(x\qquad(x+\qquad(x+1\qquad(x+1)\qquad\frac{x+1}{}\qquad\frac{x+1}{x}$$
 
 \subsection{Reduced Scoring for Late Work}
 
@@ -94,6 +99,7 @@ Later when you create an assignment, you will \emph{still} need to enable reduce
 
 If you enable this feature, then you will have the ability to make it so that a student can see a re-randomized version of a problem. In the new version, you can make it so the student can see the answer, the walk-through solution (if there is one), the hints (if there are any), and have access to the \menu{Check Answers} button. You will have the ability to control which problems this applies to. For more information, see \hyperref[SMA]{the section on Show Me Another}. This feature is supposed to serve as an analog to a solutions manual or textbook examples.
 
+If you think you will use this feature, you should go to  \hyperref[SMA]{the section on Show Me Another} now and read about it. There may be some configuration settings that you would want to set \emph{before} you import or build any homework sets.
 
 \section{Adding/Dropping Students}
 In the future, enrollment of students may be automated through Banner. For now, it falls upon you to enroll students and enter their information. 
@@ -114,13 +120,14 @@ If you understand all this so far then you may not need any further instruction.
 \item Highlight column \texttt{C}, and \menu{Insert} columns until the student email addresses are in column \texttt{H}. This should leave column \texttt{A} with G-numbers, \texttt{B} with names, several blank columns, \texttt{H} with email addresses, and more beyond that. Clear the contents of all columns beyond the email addresses.
 \item Highlight the column of names. In the \menu{Data} menu, select \menu{Text to Columns}. Choose the \menu{Delimited} option. Add \menu{Comma} to the list of delimiters, and click \menu{Finish}. Column \texttt{B} should now have your students' \emph{last} names, and column \texttt{C} should have their \emph{first} names and middle initials.
 \item Fill column \texttt{D} with the letter C. (You can enter a single C at the top of the column and drag it down the column's length.) The C stands for Currently enrolled. If a student is auditing, an A belongs here instead.
-\item Leave columns \texttt{E}, \texttt{F}, and \texttt{G} blank.
+\item Columns \texttt{E} is for a comment about the student. I usually leave this blank, but make a note if a student is only on a wait list at that point.  Column \texttt{F} is for noting the section. If there is only one CRN, I leave this blank. If there are multiple CRNs, I typically enter something like ``42483 TuTh morning'', and this will allow you to sort students by section and assign due dates differently to different sections. Column \texttt{G} is for recitation. At PCC, I don't see a need to enter anything here. But if you did, it would serve the same purpose as the section column, and just allow for multiple ways to sort.
 \item Copy column \texttt{H} (which should still have email addresses) to column \texttt{I}. Highlight column \texttt{I} and add the
 @ symbol to the list of delimiters by once again using \menu{Data}$\rightarrow$\menu{Text to Columns}. Clear all the \texttt{pcc.edu}s from column \texttt{J}. Now column \texttt{H} should \emph{still} have email addresses, and column \texttt{I} should have their user logins.
-\item Leave column \texttt{J} blank. Fill column \texttt{K} with the number 0. (This sets their permission level to \texttt{student}
-as opposed to say \texttt{professor}.)
+\item Leave column \texttt{J} blank. (This is where you could use a password hash from some earlier course. Leaving it blanks makes it so their student ID (G number) will be their initial password. Fill column \texttt{K} with the number 0. (This sets their permission level to \texttt{student} as opposed to say \texttt{professor}.)
 \item Save the Excel document as a \texttt{.csv} file. Excel may give you warnings as you do this about losing data, but don't worry.
 \end{enumerate}
+
+If you are putting multiple CRNs into one \WW\ course, then you can either repeat this process for each CRN, or you can make one big CSV file with all the courses. Just remember to distinguish the students by section using the section column.
 
 Your \texttt{.csv} file needs to be renamed to have a \texttt{.lst} (that's $\ell$\texttt{st}, not
 $1$\texttt{st}) extension. If you have trouble doing that in your operating system, you can also rename the file within \WW. Use \WW's \menu{File Manager} to upload your \texttt{.lst} file straight to the \texttt{templates} directory. Check that it really does have the \texttt{.lst} extension (and if not, use the \menu{Rename} tool). Then in the \menu{Classlist Editor}, use \menu{Import users from file} to add all of these students to your \WW\ course. If any problem sets have already been created or imported, then you should now assign them to all of these new students by using the \menu{Instructor Tools}.
@@ -144,7 +151,7 @@ You can set up your course so that guests may log in.  Guests may view problems 
 \section{Making a New Problem Set}\label{makeset}
 Problem sets can either be imported from an earlier course or made from scratch.  If your course came with problem sets that you would like to import\footnote{Of course, these may have an ordering that is not in line with your syllabus. Still, they are sets of vetted problems. So it might be worth importing them and learning how to modify these sets to meet your own needs.}, you may wish to skip ahead to the \hyperref[imp]{section on importing assignments}.  Brand new users teaching MTH 8/20/60/61/62/63/65/70/95/111/243 should skip ahead and import the default assignments that are available (and then modify them if that is desired). If you have run this course before and wish to copy your old problem sets, you should skip ahead to the \hyperref[exp]{section on exporting assignments}.
 
-To create a new problem set from scratch, in the \HSE\ or the \menu{Library Browser}, you may \menu{Create} a new set and name it whatever you would like (no spaces, periods, underscores or weird characters though.)  For example, \texttt{Assignment1} or \texttt{Chapter3Review} are good names.
+To create a new problem set from scratch, in the \HSE\ or the \menu{Library Browser}, you may \menu{Create} a new set and name it whatever you would like, just no periods or weird characters.  You \emph{can} use spaces though For example, \texttt{Assignment 1} or \texttt{Chapter 3 Review} are good names.
 
 \subsection{Add Problems}  To add problems to an assignment, go into the \menu{Library Browser}.  Select the \menu{Target Set} from the dropdown menu.  There are several sources of problems for you to browse.  
 
@@ -155,7 +162,7 @@ To create a new problem set from scratch, in the \HSE\ or the \menu{Library Brow
 
 \item{For MTH 111} select the \menu{College Algebra} library.  These problems were coded by Alex Jordan mostly over Summer 2014. Each problem has a walk-through solution, uses high-quality \WW\ coding techniques, and was written with accessibility standards in mind.
 
-\item{For MTH 95} select the \menu{Math 95} library.  These problems are generally not from a textbook and use randomization.  These problems are currently being improved upon to reach the same standards as the 60/65 problems. MTH 95 overlaps some with MTH 60/65, and you will find usable problems in the Precollege Algebra library too.
+\item{For MTH 95} select the \menu{Math 95} library.  These problems are generally not from a textbook and use randomization.  These problems are currently being improved upon to reach the same standards as the 60/65 problems. MTH 95 overlaps some with MTH 60/65, and you will find usable problems in the Precollege Algebra library too. During Fall 2015, Carl Yao and Heiko Spoddeck will work to improve the quality of the MTH 95 problems.
 
 \item{For MTH 243} select the \menu{Statistics} library.  These problems are generally not from a textbook and use randomization.  These problems are currently being improved upon to reach the same standards as the 60/65 problems. 
 
@@ -254,7 +261,7 @@ If the set used problem files that were local to your course (for example, if yo
 and selecting \menu{Make Archive}.  You will probably need to \Ctrl-click or Apple-click to select the three sources simultaneously.  This creates a \texttt{.tgz} file compressing everything you highlighted.  Download this \texttt{.tgz} file and store it.
 
 \subsection{Importing Assignments}\label{imp}
-If you already have  a \texttt{.def} file in your \FM, you can \menu{Import} it using the \HSE.  The assignment will be created, but you will still have to set the dates  and assign it to your new class through the \HSE. You can also set an ``earliest date'' and all of the dates from the \texttt{.def} file will be shifted so that the earliest date corresponds to this.
+If you already have  a \texttt{.def} file in your \FM, you can \menu{Import} it using the \HSE.  At the moment that you import it, you can set an ``earliest date'' and all of the dates from the \texttt{.def} file will be shifted so that the earliest date corresponds to this. Otherwise you will need to use the \HSE\ to adjust the dates directly.
 
 If you are importing a set that you are bringing from an old course, then you need to go into your \FM\ and upload the \texttt{.def} or \texttt{.tgz} file that is described in \hyperref[exp]{Exporting an Assignment}.  \WW\ should unpack the \texttt{.tgz} file automatically when it is uploaded to the \FM, and then delete the \texttt{.tgz} file.
 
@@ -393,10 +400,17 @@ There are several checks in place to allow you to customize how this feature is 
 \item Check answers: this gives the student the ability to enter an answer for the newly seeded version and have \WW\ check if it is correct. This would be most useful if the walk-through solutions and answers have not been enabled.
 \end{itemize}
 
-The other thing to set in \menu{Course Configuration} is the number of times a student may use \menu{Show Me Another} for each problem. Presumedly you wouldn't care to allow your student to use this button over and over again.
+Personally, I tend to always offer SMA with the Check answers option turned on, and all other elements turned off. This gives motivated students opportunity for extra practice. There's nothing wrong with turning on the other options, but it's just not my style. I \emph{do} turn on all the other options if I am creating a \WW\ course whose purpose is self-study instead of homework.
 
-Lastly, you very well might like this feature to be enabled for some problems, but not all. So in the \menu{Set Details} page for a problem set (accessible through the \HSE, and then clicking on the number of problems within the set), you can set the threshold of attempts that a student must use before the button becomes available to them. For example, it is set to $2$, then they must attempt the problem twice before the button is available. If you want the button to be immediately available, set the threshold to $0$.  If you want the button to never never be available for that problem, then convention is to use $-1$.
+The other thing to set in \menu{Course Configuration} is the number of times a student may use \menu{Show Me Another} for each problem. Maybe you wouldn't care to allow your student to use this button over and over again on any one problem forever. Personally, I set this to $-1$, which is code for ``there is no limit''.
 
+Lastly, you very well might like this feature to be enabled for some problems, but not all. For this reason, in the \menu{Set Details} page for a problem set (accessible through the \HSE, and then clicking on the number of problems within the set), you can set the threshold of attempts that a student must use before the button becomes available to them. For example, it is set to $2$, then they must attempt the problem twice before the button is available. If you want the button to be immediately available, set the threshold to $0$.  If you want the button to never never be available for that problem, then convention is to use $-1$.
+
+\emph{Important:} If you are importing one of the PCC default homework sets, then every problem's threshold number will be $-1$. If you want them to be $0$, or $2$, or whatever, it would be extremely tedious to change the threshold manually for each problem. So \emph{before} you import the problem set(s), go to the \FM, navigate up one folder, and edit the file \texttt{course.conf}. Find a blank line anywhere near the bottom and paste the line 
+\begin{center}
+\verb=$problemDefaults{showMeAnother}=2;=
+\end{center}
+or of course use some number other than $2$. Save, and \emph{then} import your problem sets. They will all have their SMA threshold set to whatever setting you made.
 
 \section{Good Ideas to Keep Everything Running Smoothly}\label{goodideas}
 
